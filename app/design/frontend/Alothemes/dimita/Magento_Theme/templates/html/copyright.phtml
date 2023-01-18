@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+
+?>
+<div class="footer-copyright">
+	<div class="main1 row">
+		
+		<div class="copyright-container col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12">
+			<span class="copyright">
+				<?php /* @escapeNotVerified */ echo preg_replace('/yyyy/', date('Y'), $block->getCopyright()); ?>&nbsp;
+				<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('coppyright')->toHtml(); ?>
+			</span>
+		</div>
+		<div class="payment col-xl-8 col-lg-6 col-md-6 col-sm-12 col-12">
+			<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('payment')->toHtml(); ?>
+		</div>
+	</div>
+	<a href="#" id="backtotop"><span class="fa fa-angle-up"></span><span class="back-to-top"><?php echo __('Back to Top')?></span></a>
+	
+
+</div>

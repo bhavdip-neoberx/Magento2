@@ -1,0 +1,164 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common =true) {
+    .breadcrumbs {
+        padding-top: 105px;
+        padding-bottom: 105px;
+        padding-top: 70px;
+        padding-bottom: 70px;
+        margin-bottom: 90px;
+        text-align: left;
+        position: relative;
+        background-image: url("../images/bkg_breadcrumbs.jpg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        .pagecrumbs-title {
+            text-align: center;
+            font-size: 3.0rem;
+            font-weight: 600;
+            color: @base-color;
+            
+            margin-bottom: 32px;
+        }
+
+        .items {
+            .dflex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        li {
+            display: inline-block;
+
+            a,
+            strong {
+                font-size: @body-font-size;
+            }
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            strong {
+                font-weight: 600;
+            }
+
+            &:not(:last-child) {
+                &:after {
+                    content: '\f3d3';
+                    color: #454545;
+                    font-family: "Ionicons";
+                    padding: 0 5px;
+                    margin: 0 12px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .cms-static-header {
+        position: relative;
+        margin-top: 20px;
+        text-align: center;
+        text-transform: uppercase;
+
+        >* {
+            padding: 10px;
+        }
+    }
+}
+
+
+/* responsive */
+
+& when (@media-common =true) {
+    // max-width: 1479px
+    @media screen and (max-width: (@screen__xxl-m + 40 - 1)) {
+        .breadcrumbs {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+    }
+    // max-width: 1199px
+    @media screen and (max-width: (@screen__xl-m - 1)) {
+        .breadcrumbs {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    @media screen and (max-width: (@screen__xm - 1)) {}
+
+    @media screen and (min-width: @screen__m) {}
+
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {}
+
+    @media screen and (max-width: @screen__m) {}
+
+    @media screen and (max-width: (@screen__m - 1)) {
+        .breadcrumbs {
+            margin-bottom: 60px;
+        }
+    }
+
+    @media screen and (max-width: (@screen__s - 1)) {}
+    // max-width: 575px
+    @media screen and (max-width: (@screen__ss - 1)) {
+        .breadcrumbs .pagecrumbs-title {
+            margin-bottom: 15px;
+        }
+    }
+    // max-width: 480px
+    @media screen and (max-width: @screen__xs ) {
+        .breadcrumbs {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            li {
+
+                a,
+                strong {
+                    font-size: 1.3rem;
+                }
+
+                &:not(:last-child):after {
+                    margin: 0 10px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)) {}
+
+    @media screen and (max-width: @screen__xs-m ) {}
+}
+
+
+& when (@media-common =true) {
+    .rtl {
+        .breadcrumbs {
+            li {
+                text-align: right;
+
+                &:not(:last-child) {
+                    &:after {
+                        content: '\f3d2';
+                    }
+                }
+            }
+        }
+    }
+}

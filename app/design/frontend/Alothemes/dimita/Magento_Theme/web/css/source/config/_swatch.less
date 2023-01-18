@@ -1,0 +1,157 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common =true) {
+
+    body {
+        //Swatch
+        .product-items {
+            .swatch-option {
+
+                &,
+                &.text {
+                    margin: 0 10px 5px 0;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+
+        .swatch-option {
+            &.color {
+                width: 20px;
+                height: 20px;
+                min-width: auto;
+                position: relative;
+                border: solid 2px transparent;
+                box-shadow: 0px 0px 3px rgba(0, 0, 0, .2);
+                .round-borders(@radius: 0);
+            }
+
+            &.color {
+                &.selected {
+                    position: relative;
+
+                    &:before {
+                        content: "\f00c";
+                        font-family: @fontawesome;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        .late-transform(@x: -50%, @y: -50%);
+
+                    }
+                }
+            }
+
+            &.text {
+                padding: 0 2px;
+                text-align: center;
+                font-size: 1.4rem;
+                font-weight: 400;
+            }
+
+            &:not(.color):focus {
+                box-shadow: none;
+            }
+
+            &.text {
+                // margin-right: 10px;
+                // margin-bottom: 15px;
+            }
+        }
+
+        .swatch-attribute {
+            margin-bottom: 10px;
+
+            &.size {
+                .swatch-option {
+                    font-size: 1.4rem;
+                    padding: 3px 15px;
+                    border-width: 1px;
+                    height: auto;
+                    .round-borders(@radius: 0);
+                }
+            }
+        }
+
+        //filter handle
+        #layered_ajax_price_text {
+            margin-bottom: 15px;
+        }
+        .ui-slider-horizontal {
+            height: 5px;
+            margin-left: 7px;
+            margin-right: 7px;
+
+            .ui-slider-handle {
+                margin-left: -7px;
+            }
+        }
+
+        .ui-slider {
+            .ui-slider-range {
+                height: 5px;
+                .transition(@value: ease, @min: 0.3s);
+                position: absolute;
+            }
+        }
+
+        .ui-slider-handle {
+            width: 13px;
+            height: 13px;
+            top: -4px;
+            .round-borders(@radius: 0);
+            background-color: @white;
+            border: 2px solid @base-color2;
+            box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+            -webkit-box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+        }
+    }
+    .swatch-option-loading {
+        content: url(../images/loader-swatch.gif);
+        width: 50px;
+
+    }
+    .product-view {
+        .swatch-option {
+            &.text {
+                line-height: 1;
+            }
+        }
+
+        .swatch-attribute.color .swatch-option.selected {
+            &:before {
+                font-size: @body-font-size;
+                line-height: 21px;
+            }
+        }
+    }
+
+    // rtl
+    .rtl {
+        .swatch-attribute {
+            .swatch-option {
+                margin-right: 0;
+                margin-left: 10px;
+
+                &.text {
+                    margin-right: 0;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

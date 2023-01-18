@@ -1,0 +1,71 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+?>
+<?php 
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); 
+$customerSession = $objectManager->get('Magento\Customer\Model\SessionFactory')->create();
+?>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel='stylesheet' href='https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css'>
+
+<header class="page-header alothemes">
+	<div class="header menu-mobile header-sticker">
+		<div class="header-main">
+			<div class="content-header d-flex">
+				<div class="col-nav-menu-top d-flex align-items-center">
+					<div class="header-logo">
+						<?php echo $this->getChildHtml('logo'); ?>
+					</div>
+				</div>
+				<div class="cart-hide-multicheckout">
+					<div class="header-tool">
+						<div class="search-product list-mobile"><a href="javascript:void(0)"><span><?= __('Search') ?></span></a></div>
+						<div class="search-area">
+							<?php echo $this->getChildHtml('top.search'); ?>						
+						</div>
+						<div class="header-account">
+							<div class="toggle-tab">
+								<span class="header-icon user"><span class="text"><?php echo __('My Account') ?></span></span>		
+							</div>
+							<div class="toggle-content alo-account">
+								<?php echo $this->getChildHtml('header.links'); ?>
+							</div>
+						</div>
+						<?php echo $this->getChildHtml('minicart'); ?>
+						<div class="nav-toggle-main">
+							<div class="header-menu ">
+								<span data-action="toggle-nav" class="action nav-toggle">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+								<?php echo $this->getChildHtml('navigation.sections'); ?>
+								<?php echo $this->getChildHtml('catalog.topnav'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<script type="text/javascript">
+
+    
+</script>
+
+
+
+
+

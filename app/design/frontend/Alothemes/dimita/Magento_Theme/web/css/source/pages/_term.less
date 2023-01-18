@@ -1,0 +1,133 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) { 
+    .cms-page-view{
+        .column {
+            &.main{
+                .toggle-tab{
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    right:0;
+                    bottom:0;
+                    text-align: right;
+                    &:before{
+                        content: "\f107";
+                        font-family: @fontawesome;
+                    }
+                }
+                .item-content{
+                    position:relative;
+                }
+                .toggle-content{
+                    display:none;
+                    &.visible{
+                        display:block;
+                    }
+                }
+            }
+        }
+    }
+    .cms-shipping-delivery,
+    .cms-privacy-policy,
+    .cms-terms-conditions,
+    .cms-returns-exchanges {
+        .page-title-wrapper {
+            display: none;
+        }
+    }  
+    .terms-condition,
+    .return-exchange,
+    .shipping-delivery,
+    .privacy_policy{
+        margin-bottom: 50px;
+        h2{
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+        h3{
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        p+h3{
+            margin-top: 40px;
+        }      
+        p{
+            margin-bottom: 15px;
+        }
+    }
+    .cms-privacy-cookie{
+        .privacy-policy{
+            line-height:25px;
+            h2{
+                margin:30px 0 10px;
+            }
+            table{
+                th,td{
+                    border-width:2px;
+                    border-style:solid;
+                    border-color:#dddddd;
+                }
+                th{
+                    font-weight:600;
+                }
+            }
+        }
+    }
+}
+
+
+/* responsive */
+& when (@media-common = true) {       
+    @media screen and (max-width: (@screen__xl-m - 1)){ }
+    @media screen and (max-width: (@screen__xm - 1)){}
+    @media screen and (min-width: @screen__m){}
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){}
+    @media screen and (max-width: @screen__m){}
+    // max-widht: 767px
+    @media screen and (max-width: (@screen__m - 1)){
+        .terms-condition,
+        .return-exchange,
+        .shipping-delivery,
+        .privacy_policy{
+            margin-bottom: 20px;
+            h2 {
+                font-size: 1.8rem;
+            }
+            h3 {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){}
+    @media screen and (max-width: (@screen__ss - 1)){}
+    @media screen and (max-width: @screen__xs ){ 
+        .terms-condition,.return-exchange,
+        .shipping-delivery,.privacy_policy{
+            h2{
+                // font-size: 2rem;
+            }
+            h3{
+                // font-size: 1.8rem;
+                // margin-bottom: 15px;
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){}
+    @media screen and (max-width: @screen__xs-m ){}   
+}

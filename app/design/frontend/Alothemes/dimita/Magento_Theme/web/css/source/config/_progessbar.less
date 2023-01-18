@@ -1,0 +1,60 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    //progress bar
+    .deal-progress {
+        background-color: #efefef;
+        display: block;
+        text-indent: -9999em;
+        font-size: 8px;
+        margin-bottom: 2px;        
+        .round-borders(@radius:30px);
+    }
+    .deal-progress-bar {         
+        .round-borders(@radius:30px);
+        height: 10px;
+        height: 6px;
+        &:extend( .crollbar-run all);
+    }
+    .deal-stock-label {
+        .dflex;
+        justify-content: space-between;
+        margin-bottom: 6px;
+        font-size:1.4rem;
+        color: #777777;
+        span {
+            display: inline-block;
+        }
+        strong {
+            color: @base-color;
+        }     
+    }
+    .product-deal-special-progress {
+        margin-bottom: 26px;
+    }  
+    .opc-progress-bar-item{
+        &._active{
+            &:before{
+                background:@base-color2;
+            }
+            > span{
+                &:before{
+                    background:@base-color2;
+                }
+            }
+        }
+    }
+     
+}

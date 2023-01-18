@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+
+?>
+<div class="footer-copyright">
+	<div class="main1 row">
+		
+		<div class="copyright-container col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+			<span class="copyright">
+				<div class="fbottom-p1">
+					<div class="social">
+						<ul class="social-profile footer-content"><?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('social-link')->toHtml(); ?></ul>
+					</div>
+					<div class="payment">
+					<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('payment')->toHtml(); ?>
+					</div>
+				</div>
+				<div class="fbottom-p2">
+					<div class="copyright">
+						<?php /* @escapeNotVerified */ echo preg_replace('/yyyy/', date('Y'), $block->getCopyright()); ?>&nbsp;
+						<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('coppyright')->toHtml(); ?>
+					</div>
+					<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('block-footer-bottom-home5')->toHtml(); ?>
+				</div>
+			</span>
+		</div>
+		
+	</div>
+	<a href="#" id="backtotop"><span class="fa fa-angle-up"></span><span class="back-to-top"><?php echo __('Back to Top')?></span></a>
+	
+
+</div>

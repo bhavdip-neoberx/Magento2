@@ -1,0 +1,166 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {
+    .lookbook-item{
+        text-align: center;
+        padding-bottom:60px;
+        margin-bottom:60px;
+        border-bottom-width:2px;
+        border-bottom-style:solid;
+        &:last-child{
+            border-bottom:0;
+            margin-bottom:20px;
+        }
+        .row{
+            align-items: center;
+        }
+        .cms-title{
+            max-width: 460px;
+            margin:0 auto;
+            .title{
+                margin-bottom:20px;
+                font-size:3.6rem;
+            }
+            .text{
+                margin-bottom:35px;
+                font-size:1.6rem;
+            }
+        }
+        .title.item{
+            display:none;
+        }
+    }  
+}
+
+
+/* responsive */
+& when (@media-common = true) {       
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+       
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .lookbook-item{
+            .cms-img{
+                margin-bottom:30px;
+            } 
+            .cms-title{
+                .title{
+                    font-size:2.8rem;
+                }
+                .text{
+                    font-size:1.5rem;
+                }
+            }
+            &:nth-child(2){
+                .cms-img{
+                    order:1;
+                }
+                .cms-content{
+                    order:2;
+                }
+            }           
+        }             
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .lookbook-item {
+            .cms-title {
+                .title{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }   
+}
+
+
+& when (@media-common = true) {
+  
+    .rtl {
+            
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

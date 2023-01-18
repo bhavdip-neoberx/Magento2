@@ -1,0 +1,273 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common =true) {
+
+    //FOOTER
+    #backtotop {
+        -webkit-animation: roll-in-left 0.6s ease-out both;
+        animation: roll-in-left 0.6s ease-out both;
+    }
+    .page-footer{
+        .box-newsletter{
+            text-align: center;
+            padding: 30px 0 100px 0;
+            border-bottom: 1px solid #ebebeb;
+            .newsletter__title{
+                margin: 0 0 50px;
+                color: #1b1b1b;
+                font-size: 34px;
+                font-weight: 700;
+                text-transform: uppercase;
+                line-height: 28px;
+            }
+            .newsletter__content{
+                max-width: 810px;
+                margin: 0 auto;
+            }
+            .search{
+                .newsletter {
+                    margin-bottom: 65px;
+                    position: relative;
+                }
+                .visible{
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    align-items: center;
+                    .control{
+                        flex: 1;
+                    }
+                    input{
+                        .round-borders (@radius: 0);
+                        border-color: #1b1b1b;
+                        height: 41px;
+                        &::placeholder{
+                            color: #1b1b1b !important;
+                        }
+                        &:-ms-input-placeholder{
+                            color: #1b1b1b !important;
+                        }
+                        &::-ms-input-placeholder{
+                            color: #1b1b1b !important;
+                        }
+                    }
+                }
+                .actions{
+                    margin-left: 20px;
+                    .action {
+                        font-weight: 400;
+                        height: 41px;
+                    }
+                }
+            }
+            .social{
+                margin-bottom: 30px;
+                .link-list{
+                    padding: 0;
+                    list-style: none;
+                    .dflex();
+                    justify-content: center;
+                    align-items: center;
+                }
+                .link-icon{
+                    font-size: 23px;
+                    padding: 0 15px;
+                }
+            }
+            .apps-shop{
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .apps-shop__item{
+                    &:nth-child(1){
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+        .footer-links-company{
+            padding: 35px 0;
+            font-family: @fontlato;
+            .main1 {
+                margin: 0;
+                .footer-bottom__left{
+                    width: 25%;
+                    .dflex();
+                    align-items: center;
+                    .copyright{
+                        .dflex();
+                        font-size: 1.4rem;
+                        p{
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .footer-center{
+                    width: 50%;
+                    .fcenter-menu{
+                        padding: 0;
+                        .dflex();
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    ul{
+                        list-style: none;
+                        li{
+                            padding: 5px 25px;
+                        }
+                    }
+                }
+                .footer-bottom__right{
+                    width: 25%;
+                    .dflex();
+                    align-items: center;
+                    justify-content: flex-end;
+                   p{
+                       .dflex();
+                       justify-content: flex-end;
+                   }
+                }
+                ul,li,p{
+                   margin-bottom: 0;
+                }
+            }
+            a{
+                color: #666666;
+                &:hover{
+                    color: @base-color2;
+                }
+            }
+        }
+    }
+    
+    /* responsive */
+    // max-width: 1479px
+    @media screen and (max-width: (@screen__xxl-m + 40 - 1)) {
+
+    }
+    // max-width: 1199px
+    @media screen and (max-width: (@screen__xl-m - 1)) {
+        .page-footer {
+            .footer-links-company {
+                .main1 {
+                    .footer-bottom__left{
+                        width: 100%;
+                        margin-bottom: 15px;
+                        justify-content: center;
+                    }
+                    .footer-center{
+                        width: 100%;
+                        margin-bottom: 20px;
+
+                    }
+                    .footer-bottom__right{
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+    // max-width: 991px
+    @media screen and (max-width: (@screen__xm - 1)) {
+       
+    }
+    
+    // max-width: 767px 
+    @media screen and (max-width: (@screen__m - 1)) {
+        .page-footer {
+            .box-newsletter{
+                padding-bottom: 35px;
+                .newsletter__title{
+                    margin-bottom: 30px;
+                    font-size: 25px;
+                }
+                .search {
+                    .newsletter{
+                        margin-bottom: 35px;
+                    }
+                }
+                .social{
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    // max-width: 575px
+    @media screen and (max-width: (@screen__ss - 1)) {
+      
+    }
+    // max-width: 480px
+    @media screen and (max-width: @screen__xs ) {
+
+    }
+    // max-width: 360px
+    @media screen and (max-width: @screen__xs-m ) {
+     
+    }
+    // max-width: 320px
+    @media screen and (max-width: @screen__xxs ){
+        .page-footer {
+            .footer-links-company {
+                .main1 {
+                    .footer-bottom__left {
+                        .copyright{
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & when (@media-common =true){
+        .rtl{
+            .page-footer {
+                .box-newsletter {
+                    .search {
+                        .actions{
+                            margin-left: 0;
+                            margin-right: 20px;
+                        }
+                    }
+                    .apps-shop {
+                        .apps-shop__item:nth-child(1){
+                            margin-right: 0;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ) {
+        .rtl {
+            
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (max-width: (@screen__xs - 1)){
+        .rtl{
+            
+        }
+    }
+}

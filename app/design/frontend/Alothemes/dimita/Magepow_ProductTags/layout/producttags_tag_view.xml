@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<page layout="2columns-left" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="sidebar.additional">
+            <block class="Magento\Cms\Block\Block" name="block.banner.sidebar.category" after="-">
+                <arguments>
+                <argument name="block_id" xsi:type="string">block-banner-sidebar-category</argument>
+                </arguments>
+            </block>
+            <referenceBlock name="wishlist_sidebar" remove="true"/>
+            <referenceBlock name="sale.reorder.sidebar" remove="true"/>
+            <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+        </referenceContainer>
+         <move element="tag.view.listing" destination="sidebar.additional" before="catalog.compare.sidebar"/>
+	</body>
+</page>

@@ -1,0 +1,414 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    
+    .page-top-about {
+        padding-bottom: 70px;
+        border-bottom: 1px solid #ebebeb;
+        margin-bottom: 75px;
+        .phrase-content {
+            .phrase {
+                h3 {
+                    font-size: 2.4rem;
+                    margin-bottom: 10px;
+                }
+                p {
+                    font-size: 16px;
+                    color: #666;
+                    line-height: 28px;
+                }
+            }
+            .mission {
+                margin-bottom: 52px;
+            }
+        }
+    }
+    .find-store {
+        padding-bottom: 20px;
+        .img-map {
+            margin-top: 44px;
+            padding-left: 45px;
+        }
+        .find-store-phrase {
+            margin-top: 160px;
+            padding-left: 90px;
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+                color: #000;
+                margin-bottom: 10px;
+            }
+            p {
+                line-height: 28px;
+                margin-bottom: 30px;
+            }
+            a {
+                .button-decor;
+                border-color: @base-color2;
+                background-color: @base-color2;
+                color: #fff;
+            }
+        }
+    }
+    .cms-static-employee{
+        text-align: center;
+        border-top:1px solid #ebebeb;
+        padding-top:75px;
+        padding-bottom:75px;
+        img{
+            margin:0 auto;
+        }
+        .our-team{
+            font-size: 24px;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 10px;
+        }
+        .cms-title{
+            margin-bottom:70px;
+            .title {
+                font-size: 2.4rem;
+                margin-bottom: 8px;
+            }
+        }
+        .employee-title{
+            margin-top:20px;
+            .name{
+                font-size:1.8rem;
+                font-weight:700;
+                line-height: 1.2;
+                margin-bottom:5px;
+            }
+            .position{
+                font-size: 1.4rem;
+                line-height: 1.714;
+            }
+        }
+    }
+    .choose.us {
+        padding-bottom: 85px;
+        border-bottom: 1px solid #ebebeb;
+        .choose.primary {
+            text-align: center;
+            margin-bottom: 66px;
+            h3 {
+                font-size: 24px;
+                font-weight: 600;
+                color: #000;
+            }
+            p {
+                font-size: 14px;
+                color: #555555;
+            }
+        }
+        .choose-1 {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+        .choose-2 {
+            width: 20%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .choose-inner {
+            text-align: center;
+            >div {
+                margin-bottom: 28px;
+            }
+            p {
+                font-size: 14px;
+                font-weight: 400;
+                color: #333;
+            }
+            .icon-ico {
+                display: inline-block;
+                width: 152px;
+                height: 152px;
+                border-radius: 50%;
+                font-size: 70px;
+                color: #fff;
+                background-color: #17b0c7;
+                text-align: center;
+                line-height: 150px;
+                &:before {
+                    font-family: 'icomoon'  !important;
+                }
+            }
+        }
+    }
+}
+
+
+/* responsive */
+& when (@media-common = true) {
+    // max-width: 1479px
+    @media screen and (max-width: (@screen__xxl-m + 40 - 1)) {
+        .find-store .find-store-phrase {
+            margin-top: 130px;
+            margin-bottom: 30px;
+        }
+    }
+    // max-width: 1199px
+    @media screen and (max-width: (@screen__xl-m - 1)){
+        .find-store .find-store-phrase {
+            margin-top: 70px;
+        }
+        .choose.us {
+            .choose-inner {
+                .icon-ico {
+                    width: 130px;
+                    height: 130px;
+                    line-height: 130px;
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+    // max-width: 991px
+    @media screen and (max-width: (@screen__xm - 1)){
+        .page-top-about {
+            padding-bottom: 45px;
+            margin-bottom: 50px;
+            .aboutus-image {
+                margin-bottom: 45px;
+                img {
+                    width: 100%;
+                }
+            }
+            .phrase-content {
+                .mission {
+                    margin-bottom: 35px;
+                }
+            }
+        }
+        .find-store {
+            .find-store-phrase {
+                margin-top: 50px;
+            }
+        }
+        .choose.us {
+            .choose.primary {
+                margin-bottom: 45px;
+            }
+        }
+    }
+    @media screen and (min-width: @screen__m){}
+    // min-width: 768px and max-width: 991px
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+        .cms-static-service{
+            .cms-title {
+                .text{
+                    font-size: 1.3rem;
+                }
+            }
+        }    
+    }
+    @media screen and (max-width: @screen__m){}
+    // max-width: 767px
+    @media screen and (max-width: (@screen__m - 1)){
+        .find-store {
+            .img-map {
+                padding-left: 0;
+                margin-top: 15px;
+            }
+            .find-store-phrase {
+                padding-left: 0;
+                margin-top: 20px;
+            }
+        }
+        .cms-slider-about {
+            .text-slide {
+                .caption1{
+                    font-size: 2rem;
+                }
+            }
+        }
+        .cms-static-employee {
+            padding-top: 45px;
+            padding-bottom: 40px;
+            .cms-title {
+                margin-bottom: 43px;
+            }
+        }
+        .choose.us {
+            padding-bottom: 45px;
+            .choose-inner {
+                > div {
+                    margin-bottom: 20px;
+                }
+                .icon-ico {
+                    width: 90px;
+                    height: 90px;
+                    line-height: 90px;
+                    font-size: 26px;
+                }
+            }
+        }  
+    }
+    @media screen and (max-width: (@screen__s - 1)){}
+    // max-width: 575px
+    @media screen and (max-width: (@screen__ss - 1)){
+        .choose.us .choose-1 .choose-2 {
+            width: 50%;
+        }
+        .choose.us .choose-1 .choose-2:nth-child(2)~.choose-2 {
+            margin-top: 15px;
+        }
+    }
+    // max-width: 480px
+    @media screen and (max-width: @screen__xs ){
+        .page-top-about {
+            padding-bottom: 30px;
+            margin-bottom: 35px;
+            .aboutus-image {
+                margin-bottom: 30px;
+            }
+           
+            .phrase-content {
+                .mission {
+                    margin-bottom: 22px;
+                }
+                .phrase {
+                    h3 {
+                        font-size: 2.1rem;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+        .choose.us {
+            padding-bottom: 35px;
+            .choose.primary {
+                margin-bottom: 35px;
+                h3 {
+                    font-size: 2.1rem;
+                }
+                p {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        .find-store {
+            .find-store-phrase {
+                h3 {
+                    font-size: 2.1rem;
+                }
+            }
+        }
+        .cms-static-employee {
+            .cms-title {
+                .title {
+                    font-size: 2.1rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){}
+    // max-width: 360px
+    @media screen and (max-width: @screen__xs-m ){
+        .cms-slider-about {
+            .text-slide {
+                .caption1{
+                    font-size: 1.5rem;
+                    margin-bottom:10px;
+                }
+                .action{
+                    padding:0 20px;
+                    font-size:1.1rem;
+                }
+            }
+        }
+    }   
+}
+
+
+& when (@media-common = true) {  
+    .rtl {
+        .page-about {
+            .brand-people {
+                ul {
+                    li:not(:last-child){
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+       
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+            .choose.us {
+                .choose-2{
+                    width: calc(~"100% / 3");
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+            .choose.us {
+                .choose-2{
+                    width: 50%;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+          
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+          
+        }
+    }
+}
